@@ -1,0 +1,868 @@
+/* reset and custom style classes */
+/*
+1.  Use a more-intuitive box-sizing model. 
+    Remove default margin and padding
+*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/*
+2. Allow percentage-based heights in the application
+*/
+html, body {
+    height: 100%;
+    font-size: 18px;
+    min-height: 100%;
+    font-family: var(--ff-paragraph);
+    font-weight: var(--fw-reg);
+    scroll-behavior: smooth;
+}
+/*
+Typographic tweaks!
+3. Add accessible line-height
+4. Improve text rendering
+*/
+body {
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    font-family: var(--ff-base);
+}
+/*
+5. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+/*
+6. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+    font: inherit;
+}
+/*
+7. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+/*
+8. Create a root stacking context
+*/
+#root, #__next {
+    isolation: isolate;
+}
+
+
+/* Root Styles */
+:root {
+    /* font styles */
+    --ff-title: 'Audiowide', cursive;
+    --ff-sub-title: 'Readex Pro', sans-serif;
+    --ff-paragraph: 'Actor', sans-serif;
+
+    --fs-lrg: 2.25rem;
+    --fs-md: 1.25rem;
+    --fs-reg: 1rem;
+    --fs-sml: .8rem;
+
+    --fw-reg: 400;
+    --fw-md: 500;
+    --fw-semi-bold: 600;
+
+    --lh-lrg: 64px;
+    --lh-md: 44px;
+    --lh-sml: 36px;
+
+    --ls-md:25px;
+    --ls-sml: 5px;
+
+    /* colors */
+    --clr-arsenic: #525252;
+    --clr-sea-grn: #22A39F;
+    --clr-raisin-blk: #222222;
+    --clr-alabaster: #FEFDFC;
+    --clr-active: #A32267;
+
+    /* transitions */
+    --transition: all 300ms ease-in-out;
+    --transition-two: all 500ms ease-in-out;
+    --transition-three: all 800ms ease;
+}
+
+/* custom class styles */
+.grid {
+    display: grid;
+}
+
+.flex_row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex_column {
+    display: flex;
+    flex-direction: column;
+}
+
+.center_by_flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center_by_grid {
+    display: grid;
+    place-content: center;
+}
+
+.center {
+    justify-content: center;
+    align-items: center;
+}
+
+.inactive {
+    display: none;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+/* custom tag styles */
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: var(--clr-sea-grn);
+    font-family: var(--ff-sub-title);
+}
+
+a:hover {
+    color: var(--clr-active);
+    font-size: 1.05rem;
+}
+
+a:active {
+    font-weight: var(--fw-md);
+}
+
+ul {
+    width: 100%;
+    height: 100%;
+}
+
+li {
+    list-style: none;
+}
+
+div {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+h1, h2, h3 {
+    color: var(--clr-raisin-blk);
+}
+
+h1 {
+    font-size: var(--fs-lrg);
+}
+
+h2 {
+    font-size: var(--fs-md);
+}
+
+h3 {
+    font-family: var(--ff-sub-title);
+    font-size: var(--fs-reg);
+}
+
+p {
+    color: var(--clr-arsenic);
+}
+
+/* cursor pointer */
+.hamburger_menu:hover, .arrow,:hover,
+.social_media i:hover,
+.email:hover, 
+.gym_list p:hover,
+.click_to_see p:hover, 
+.back:hover,
+.instructors_container i,
+.photos_container i {
+    cursor: pointer;
+}
+
+/* common uses */
+header,
+.instructor,
+.type,
+.blog_container,
+.meal,
+.nav_desktop ul { 
+    align-items: center;
+}
+
+.title,
+.three {
+    align-items: center;
+	justify-content: center 
+}
+
+.hamburder_menu,
+ul,
+.instructors_container,
+.photos_container,
+.plans_container {
+	justify-content: space-evenly;
+}
+
+.container,
+.gym_list,
+.instructor_coursel, 
+.photos_coursel,
+.contact > div {
+    align-items: center;
+    justify-content: center;
+}
+
+a ,
+header,
+.nav_mobile,
+.email,
+.email::after
+.social_media i {
+	transition: var(--transition);
+}
+
+title,
+.gym,
+.type,
+.daily_fit_challenge,
+.meal {
+	 transition: var(--transition-two);
+}
+
+/* header */
+header {
+    position: fixed;
+    inset: 0 0 auto;
+    z-index: 4;
+
+    padding: 1.5em 0;
+
+    width: 100%;
+
+    justify-content: space-between;
+
+    background-color: #434242a2;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.logo_container {
+    margin-left: 1.5em;
+}
+
+.logo_container img {
+    height: 3rem;
+    width: 8rem;
+}
+
+/* hamburger menu */
+.hamburger_menu {
+    height: 4rem;
+    width: 4rem;
+    margin-right: 1em;
+    z-index: 10;
+}
+
+.patty {
+    width: 50px;
+    height: 5px;
+    background-color: white;
+    border-radius: .5rem;
+}
+
+/* navigation */
+.nav_mobile {
+    position: absolute;
+
+    padding: 2em;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    transform: translateX(100%);
+    background-color: #525252;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+nav li {
+    height: fit-content;
+}
+
+nav a {
+    font-size: var(--fs-lrg);
+}
+
+.line_left, .line_right, .middle_line {
+    height: 1px;
+    width: 5rem;
+    background-color: #f7f7f7;
+}
+
+/* containers */
+section {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    display: flex;
+}
+
+.container p {
+    color: var(--clr-alabaster);
+}
+
+.one:before {
+    background: url('/images/gym-img-one.jpg');
+}
+
+.two:before {
+    background-image: url('/images/gym-img-five.jpg');
+}
+
+.three:before {
+    background-image: url('/images/gym-img-three.jpg');
+}
+
+.four:before {
+    background-image: url('/images/gym-img-four.jpg');
+}
+
+.image_background:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: .75;
+}
+
+/* title styles */
+.gym_name {
+    gap: 1em;
+}
+
+.title {
+    font-size: var(--fs-md);
+    font-family: var(--ff-title);
+    letter-spacing: var(--ls-sml);
+    background-color: rgba(52, 52, 52, 0.3);
+    padding: .2em .5em;
+}
+
+.quote_container .line_left,
+.quote_container .line_right {
+    display: none;
+}
+
+.quote_container {
+    gap: .5em;
+    text-align: center;
+}
+
+/* philosophy styles */
+.philosophy_container {
+    text-align: center;
+    padding: 2em 0;
+    background-image: url('/images/anime-img-three.jpg');
+}
+
+.philosophy_container p {
+    color: var(--clr-raisin-blk);
+}
+
+/* gym section */
+.gym {
+    gap: 1.125em;
+}
+
+.gym_list {
+    padding-inline: 2em;
+    gap: 1.5em;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.gym_list p {
+    font-size: var(--fs-md);
+    color: #4FA6A3;
+    font-weight: bolder;
+}
+
+/* instructors and photos container */
+.instructors_container,
+.photos_container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+    background-image: url('/images/Meteor.svg');
+    transition: var(--transition-three);
+}
+
+.instructor_coursel, 
+.photos_coursel {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 1em;
+}
+
+.instructor {
+    padding: 2em;
+    gap: 1em;
+    justify-content: space-around;
+    border-radius: 1rem;
+}
+
+.inst_img,
+.gym_img {
+    width: 12rem;
+    height: 20rem;
+    border-radius: .3rem;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.gym_img {
+    width: 15rem;
+    height: 18rem;
+}
+
+.photos_container .arrow {
+    transform: rotate(180deg);
+}
+/* photos container */
+
+/* contact container */
+.contact_container {
+    text-align: center;
+}
+
+/* news */
+.news {
+    gap: 2em;
+}
+
+.news h2 {
+    color: white;
+    font-size: var(--fs-lrg);
+}
+
+.news p {
+    color: white;
+    font-size: var(--fs-md);
+}
+
+.date {
+    text-align: center;
+}
+
+
+/* plans section */
+.three {
+    gap: 2em;
+    padding: 2em 0;
+}
+
+.three h2 {
+    text-align: center;
+    color: var(--clr-alabaster);
+}
+
+.plans_container {
+    width: 100%;
+    gap: 2em;
+    padding: 4em 0;
+}
+
+.plans_container p {
+    color: var(--clr-raisin-blk);
+}
+
+.type {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 1em;
+    min-width: 13rem;
+
+    background-color: var(--clr-alabaster);
+}
+
+.monthly {
+    transition-delay: 400ms;
+}
+
+.semi_annually {
+    transition-delay: 600ms;
+}
+
+.annually {
+    transition-delay: 800ms;
+}
+
+.type h2 {
+    color: var(--clr-raisin-blk);
+}
+
+.inclusions {
+    text-align: center;
+}
+
+.price {
+    font-size: var(--fs-md);
+}
+
+.dollar_sgn {
+    font-weight: var(--fw-semi-bold);
+    color: #00A619;
+}
+
+.included {
+    color: var(--clr-sea-grn);
+}
+
+.not {
+    color: var(--clr-active);
+}
+
+.sign_up {
+    border: none;
+    padding-inline: 1em;
+
+    margin-top: 1em;
+
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+.sign_up:active {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+/* blogs */
+.blog_container {
+    padding: 2em 0;
+    background-image: url('/images/anime-img-two.jpg');
+}
+
+.blog_container h2 {
+    font-size: var(--fs-lrg);
+    color: rgb(206, 46, 46);
+}
+
+.entry_container {
+    gap: 1em;
+    width: 100%;
+    padding-top: 4em;
+    padding-bottom: 4em;
+    justify-content: space-around;
+}
+
+.daily_fit_challenge,
+.meal {
+    padding: 2em;
+    background-color: var(--clr-alabaster);
+}
+
+.meal {
+    gap: 1.125em;
+}
+
+.meal img {
+    width: 9rem;
+    height: 9rem;
+    border-radius: .5rem;
+}
+
+/* contact container */
+.contact > div {
+    gap: 2.25em;
+}
+
+.contact_container {
+    gap: 1em;
+}
+
+.email {
+    position: relative;
+    font-size: var(--fs-sml);
+}
+
+.email::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--clr-sea-grn);
+}
+
+.email:hover {
+    font-size: 1rem;
+}
+
+.email_container:hover .email::after {
+    width: 100%;
+}
+
+.social_media {
+    gap: 2em;
+    color: var(--clr-sea-grn);
+}
+
+.social_media i {
+    font-size: 1.75rem;
+}
+
+.social_media i:hover{
+    color: #20cfc9;
+}
+
+/* animation, effects, garnish*/
+.type, 
+.blog_container .daily_fit_challenge,
+.blog_container .meal {
+    box-shadow: rgba(0, 0, 0, 1) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.translate_left {
+    transform: translateX(-100%);
+    /* transition: var(--transition-three); */
+}
+
+.translate_left_nav {
+    transform: translateX(0);
+}
+
+.translate_right {
+    transform: translateX(100%);
+    /* transition: var(--transition-three); */
+}
+
+.nav_slider {
+    transform: translateX(-50%);
+    background: rgb(15, 27, 29);
+    opacity: 0.7;
+    transition: 0.6s;
+}
+  
+.nav_slider ul li a {
+    font-weight: bolder;
+}
+
+/* arrow */
+.arrow{
+    position:relative;
+    width:30px;
+    height: 30px;
+    transition:0.5s;
+    overflow:hidden;
+    transform: rotate(0deg);
+  }
+
+  #back {
+    transform: rotate(180deg);
+  }
+  
+  .arrow{
+    border:solid 2px white; 
+    border-radius:50%;
+  }
+  .arrow:after{
+    position:absolute;
+    display:block;
+    content:"";
+    color:white;
+    width: 20px;
+    height: 15px;
+    top:-1px;
+    border-bottom:solid 2px;
+    transform:translatex(4px);
+    transform: rotate(90deg);
+  }
+  
+  .arrow:before{
+    position:absolute;
+    display:block;
+    content:"";
+    color:white;
+    width: 8px;
+    height: 8px;
+    border-top:solid 2px;
+    border-left:solid 2px;
+    top:50%;
+    left:2px;
+    transform-origin:0% 0%;
+    transform:rotatez(-45deg);
+    transform: rotate(90deg);
+  
+  }
+  .arrow:before{
+   animation: aniArrow01 1s cubic-bezier(0, 0.6, 1, 0.4) infinite 0.5s;
+  }
+  
+  .arrow:after{
+   animation: aniArrow02 1s cubic-bezier(0, 0.6, 1, 0.4) infinite 0.5s;
+  }
+  
+  
+  @keyframes aniArrow01 {
+    0% {
+      transform:rotatez(-45deg) translateX(30px) translateY(30px);
+    }
+    100% {
+      transform: rotatez(-45deg) translateX(-35px) translateY(-35px);
+    }
+  }
+  
+  
+  @keyframes aniArrow02 {
+    0% {
+      transform:translateX(45px);
+    }
+    100% {
+      transform:translateX(-44px);
+    }
+  }
+  
+  @keyframes borderAni{
+     0% {
+      border:solid 2px white;
+    }
+    100% {    
+      border:solid 2px white; 
+      border-radius:50%;
+    }
+  }
+
+  /* media queries */
+
+@media screen and (min-width: 768px) {
+    .hamburger_menu {
+        display: none;
+    }
+    .title {
+        font-size: var(--fs-lrg);
+    }
+
+    .nav_desktop {
+        display: flex;
+        width: 50%;
+    }
+
+    .nav_desktop ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        gap: 2em;
+    }
+
+    .nav_desktop a {
+        font-size: var(--fs-reg);
+    }
+
+    .quote_container .line_left,
+    .quote_container .line_right {
+        display: block;
+    }
+
+    .inst_img {
+        width: 20rem;
+        height: 27rem;
+    }
+
+    .gym_img {
+        display: block;
+        width: 10rem;
+        height: 10rem;
+    }
+
+    .photos_container i {
+        display: none;
+    }
+
+    .email {
+        font-size: var(--fs-reg);
+    }
+
+    .type {
+        min-width: 10rem;
+    }
+
+    .type p {
+        font-size: var(--fs-sml);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    .type {
+        min-width: 13rem;
+    }
+
+    .type p {
+        font-size: var(--fs-reg);
+    }
+
+    .instructor_coursel {
+        gap: 2em;
+    }
+
+    .instructor {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .inst_img {
+        width: 12rem;
+        height: 18rem;
+    }
+
+    .gym_img {
+        width: 12rem;
+        height: 15rem;
+    }
+
+    .instructor_coursel i {
+        display: none;
+    }
+}
+
