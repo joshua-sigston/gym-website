@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- style link -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- font links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Actor&family=Audiowide&family=Readex+Pro:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Final Form Fitness</title>
+</head>
+<body>
+    <header class="flex_row" id="header">
+        <div class="logo_container center_by_flex" id="logo-container">
+            <img src="/images/logo.png" alt="logo" class="logo">
+        </div>
+        
+        <!-- nav mobile -->
+        <div class="hamburger_menu flex_column" id="nav_menu">
+            <div class="patty"></div>
+            <div class="patty"></div>
+            <div class="patty"></div>
+        </div>
+
+        <nav id="nav" class="nav_mobile">
+            <ul>
+                <li><a href="#gym" class="nav_item">the Gym</a></li>
+                <li><a href="#plans" class="nav_item">Plans</a></li>
+                <li><a href="#news" class="nav_item">News</a></li>
+                <li><a href="#contact" class="nav_item">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- nav desktop -->
+        <nav id="nav-desktop" class="nav_desktop inactive">
+            <ul>
+                <li><a href="#gym">the Gym</a></li>
+                <li><a href="#plans">Plans</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+ 
+    <!-- main content -->
+    <section class="container one gym_name image_background">
+        <h1 class="title main hidden">Final Form Fitness</h1>
+        <div class="quote_container flex_row center">
+            <div class="line_right"></div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+            <div class="line_left"></div>
+    </section>
+
+    <div class="philosophy_container">
+        <h2>Our Philosophy</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, minima incidunt eveniet magnam libero placeat perferendis rerum illum, amet impedit error qui doloremque expedita voluptates, non rem veniam! Ut, nesciunt!</p>
+    </div>
+
+    <section class="container two gym image_background" id="gym">
+        <div class="title_container flex_column center">
+            <h2 class="title hidden flex_column">The Gym</h2>
+        </div>
+        <div class="flex_row gym_list">
+            <p id="see-instructors">Instructors</p>
+            <p id="see-photos">Photos</p>
+        </div>
+
+        <div class="instructors_container translate_left">
+            <div class="instructor_coursel">
+                <i class="fa-solid fa-arrow-left"></i>
+                <div class="instructor flex_column">
+                    <h3 class="name">Magnam Fuga</h3>
+                    <img src="/images/instructor.jpg" alt="" class="inst_img">
+                </div>
+                <div class="instructor flex_column inactive">
+                    <h3 class="name">Sit Consectetur</h3>
+                    <img src="/images/instructor2.jpg" alt="" class="inst_img">
+                </div>
+                <div class="instructor flex_column inactive">
+                    <h3 class="name">Doloribus Animi</h3>
+                    <img src="/images/instructor3.jpg" alt="" class="inst_img">
+                </div>
+                <i class="fa-solid fa-arrow-right"></i>
+            </div>
+            <div class="back_container center_by_flex">
+                <div class="arrow" id="back-instructors"></div>
+            </div>
+        </div>
+
+        <div class="photos_container translate_right">
+            <div class="photos_coursel">
+                <i class="fa-solid fa-arrow-left"></i>
+                <img src="/images/gym-img-three.jpg" alt="" class="gym_img">
+                <img src="/images/gym-img-five.jpg" alt="" class="gym_img inactive">
+                <img src="/images/gym-img-one.jpg" alt="" class="gym_img inactive">
+                <img src="/images/gym-img-four.jpg" alt="" class="gym_img inactive">
+                <img src="/images/gym-img-two.jpg" alt="" class="gym_img inactive">
+                <img src="/images/gym-img-one.jpg" alt="" class="gym_img inactive">
+                <i class="fa-solid fa-arrow-right"></i>
+            </div>
+            <div class="back_container center_by_flex">
+                <div class="arrow" id="back-photos"></div>
+            </div>
+        </div>
+       
+        <!-- <div class="info_panel flex_row translate_right container image_background">
+            <div class="img_container flex_column">
+                <div class="flex_row">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    <img src="/images/gym-photo.jpg" alt="photo of the gym" class="gym_photo">
+                    <img src="/images/gym-photo.jpg" alt="photo of the gym" class="gym_photo inactive">
+                    <img src="/images/gym-photo.jpg" alt="photo of the gym" class="gym_photo inactive">
+                    <img src="/images/gym-photo.jpg" alt="photo of the gym" class="gym_photo inactive">
+                    <img src="/images/gym-photo.jpg" alt="photo of the gym" class="gym_photo inactive">
+                    <img src="/images/gym-photo.jpg" alt="photo of the gym" class="gym_photo inactive">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+            </div>
+            <div class="instructors_container flex_row">
+                <i class="fa-solid fa-arrow-left"></i>
+                <div class="instructor flex_column">
+                    <h3 class="name">Magnam Fuga</h3>
+                    <img src="/images/instructor.jpg" alt="" class="inst_img">
+                </div>
+                <div class="instructor flex_column inactive">
+                    <h3 class="name">Sit Consectetur</h3>
+                    <img src="/images/instructor.jpg" alt="" class="inst_img">
+                </div>
+                <div class="instructor flex_column inactive">
+                    <h3 class="name">Doloribus Animi</h3>
+                    <img src="/images/instructor.jpg" alt="" class="inst_img">
+                </div>
+                <i class="fa-solid fa-arrow-right"></i>
+            </div>
+            <div class="back_container center_by_flex">
+                <div class="arrow" id="back"></div>
+            </div>
+        </div> -->
+    </section> 
+
+    <div class="philosophy_container">
+        <h2>Our Philosophy</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, minima incidunt eveniet magnam libero placeat perferendis rerum illum, amet impedit error qui doloremque expedita voluptates, non rem veniam! Ut, nesciunt!</p>
+    </div>
+
+    <section class="container three image_background" id="plans">
+        <h2 class="title hidden">Pick Your Form</h2>
+            <div class="plans_container flex_row">
+                <div class="type monthly translate_right hidden">
+                    <h2>1 Month</h2>
+                    <p class="price"><span span class="dollar_sgn">$</span>29</p>
+                    <div class="inclusions">
+                        <p>Unde autem: <span class="not">not included</span></p>
+                        <p>Officia magnam: <span class="not">not included</span></p>
+                        <p>Adipisicing elit: <span class="included">included</span></p>
+                    </div>
+                    <button class="sign_up"><a href="#">Sign Up</a></button>
+                </div>
+                <div class="type semi_annually translate_right hidden">
+                    <h2>3 Month</h2>
+                    <p class="price"><span class="dollar_sgn">$</span>69</p>
+                    <div class="inclusions">
+                        <p>Unde autem: <span class="included">included</span></p>
+                        <p>Officia magnam: <span class="not">not inlcuded</span></p>
+                        <p>Adipisicing elit: <span class="not">not included</span></p>
+                    </div>
+                    <button class="sign_up"><a href="#">Sign Up</a></button>
+                </div>
+                <div class="type annually translate_right hidden">
+                    <h2>1 Year</h2>
+                    <p class="price"><span span class="dollar_sgn">$</span>99</p>
+                    <div class="inclusions">
+                        <p>Unde autem: <span class="included">included</span></p>
+                        <p>Officia magnam: <span class="included">included</span></p>
+                        <p>Adipisicing elit: <span class="included">included</span></p>
+                    </div>
+                    <button class="sign_up"><a href="#">Sign Up</a></button>
+                </div>
+        </div>
+    </section>
+
+    <div class="blog_container flex_column" id="blog">
+        <h2>Blog</h2>
+        <div class="entry_container flex_row">
+            <div class="daily_fit_challenge translate_left hidden">
+                <h3>The Work</h3>
+                <p>Bench Press: 5 sets of 12</p>
+                <p>Inclince Bench Press: 5 sets of 12</p>
+                <p>Decline DB Bench Press: 5 sets of 12</p>
+                <p>Cable Flys: 5 sets of 12</p>
+            </div>
+            <div class="meal flex_column translate_right hidden">
+                <h3>Linguine With Lemony Chicken</h3>
+                <img src="/images/linguine.jpeg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <section class="container four flex_column image_background" id="news">
+        <h2>News</h2>
+        <div class="News">
+            <div class="date">
+                <h3>01 Oct 22</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio?</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="philosophy_container">
+        <h2>Our Philosophy</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, minima incidunt eveniet magnam libero placeat perferendis rerum illum, amet impedit error qui doloremque expedita voluptates, non rem veniam! Ut, nesciunt!</p>
+    </div>
+
+    <section class="container one contact image_background" id="contact">
+        <h2 class="title hidden">Contact Us</h2>
+        <div class="flex_column">
+            <div class="contact_container flex_column">
+                <div class="phone">444-444-4444</div>
+                <div class="email_container">
+                    <div class="email">something.someone@somewhere.com</div>
+                </div>
+            </div>
+            <div class="social_media flex_row">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-square-facebook"></i>
+                <i class="fa-brands fa-telegram"></i>
+            </div>
+        </div>
+    </section>
+<script src="script.js"></script>
+</body>
+</html>
