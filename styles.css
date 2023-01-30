@@ -340,19 +340,19 @@ section {
 }
 
 .one:before {
-    background: url('/images/gym-img-one.jpg');
+    background: url('images/gym-img-one.jpg');
 }
 
 .two:before {
-    background-image: url('/images/gym-img-five.jpg');
+    background-image: url('images/gym-img-five.jpg');
 }
 
 .three:before {
-    background-image: url('/images/gym-img-three.jpg');
+    background-image: url('images/gym-img-three.jpg');
 }
 
 .four:before {
-    background-image: url('/images/gym-img-four.jpg');
+    background-image: url('images/gym-img-four.jpg');
 }
 
 .image_background:before {
@@ -397,7 +397,7 @@ section {
 .philosophy_container {
     text-align: center;
     padding: 2em 0;
-    background-image: url('/images/anime-img-three.jpg');
+    background-image: url('images/anime-img-three.jpg');
 }
 
 .philosophy_container p {
@@ -433,7 +433,7 @@ section {
     display: flex;
     flex-direction: column;
     
-    background-image: url('/images/Meteor.svg');
+    background-image: url('images/Meteor.svg');
     transition: var(--transition-three);
 }
 
@@ -579,7 +579,7 @@ section {
 /* blogs */
 .blog_container {
     padding: 2em 0;
-    background-image: url('/images/anime-img-two.jpg');
+    background-image: url('images/anime-img-two.jpg');
 }
 
 .blog_container h2 {
