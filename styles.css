@@ -411,9 +411,21 @@ section {
 
 .gym_list {
     padding-inline: 2em;
-    gap: 1.5em;
+    gap: 2em;
     text-align: center;
     flex-wrap: wrap;
+}
+
+.gym_list_item {
+    align-items: center;
+    gap: 1em;
+    padding: .25em;
+    background-color: #525252ba;
+    border-radius: .5rem;
+}
+
+.gym_list i {
+    color: var(--clr-active);
 }
 
 .gym_list p {
