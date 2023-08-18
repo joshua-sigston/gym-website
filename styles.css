@@ -401,7 +401,7 @@ section {
 .philosophy_container {
     text-align: center;
     padding: 2em 0;
-    background-image: url('images/gggrain.svg');
+    background-color: var(--clr-arsenic);
 }
 
 .philosophy_container p {
